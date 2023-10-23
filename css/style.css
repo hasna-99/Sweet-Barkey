@@ -1,0 +1,481 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fdf9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    width: 85%;
+    margin: auto;
+}
+.nav-list{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-title{
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #3b3b3b;
+}
+.section-header .underline{
+    display: block;
+    width: 70px;
+    height: 2px;
+
+    margin: auto;
+    background-color:#c20046;
+    transition:0.5s;
+}
+.section-header:hover .underline{
+    width: 120px;
+}
+/* ==================================== Header Start ======================================= */
+header {
+    padding: 20px 0;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-content img{
+    max-width:150px;
+    margin-top: -30px;
+
+}
+.header-content nav{
+    text-align: center;
+}
+.header-content  .right-icon{
+    text-align: right;
+    font-size: 16px;
+    margin-top: -5px;
+}
+.header-content ul li {
+    display: inline-block;
+}
+.header-content ul li a , .header-content ul li a{
+    color:#3b3b3b;
+}
+.header-content nav ul li .link {
+    position: relative;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+    position: relative;
+}
+.header-content nav ul li .link::before,.header-content nav ul li .link::after{
+    content:"";
+    position: absolute;
+    border-style: solid; 
+    left: 0;
+    top:0; 
+    transition: 0.5s;
+}
+.header-content nav ul li .link::before{
+    height: 100%; 
+    width: 95%;
+    border-width: 0 2px;
+    transform: scale3d(1,0,1);
+}
+.header-content nav ul li .link:hover::before{
+    transform: scale3d(1,1,1);
+}
+.header-content nav ul li .link::after{
+    height: 92%; 
+    width: 99%;
+    border-width: 2px 0;
+    transform: scale3d(0,1,1);
+    transform-origin: left;
+}
+.header-content nav ul li .link:hover::after{
+    transform: scale3d(1,1,1);
+    transition-delay: 0.3s;
+}
+.header-content .right-icon ul li  {
+    padding: 10px ;
+}
+.header-content .right-icon ul li i {
+    color: #3b3b3b;
+    font-size: 25px;
+}
+.header-content .right-icon ul li:last-child i {
+ position: relative;
+ margin-right: 11px;
+ right: 10px;
+ font-size: 25px;
+}
+.header-content .right-icon ul li:last-child i::after{
+    position: absolute;
+    content: "0";
+    background-color:#c20046;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 14px;
+    bottom: -5px;
+}
+.bag{
+    color: #3b3b3b;
+    font-weight: bold;
+} 
+/* ==================================== Header End ======================================= */
+ 
+/* =================================== Drobdown Start =================================== */
+.dropdown-list{
+position: relative;
+}
+.dropdown-table{
+    position: absolute;
+    width: 400px;
+    background-color: #fdf9f9;
+    border: 1px solid #c20046;
+    margin-top: 5px;
+    padding: 12px;
+    transform: scale(0);
+    transition: 1s;
+    visibility: hidden;
+}
+.dropdown-list:hover .dropdown-table{
+    transform: scale(1);
+    visibility: visible;
+}
+.dropdown-table ul{
+    display: table-cell;
+    text-align: center;
+}
+.dropdown-table ul li:first-child a {
+    border-bottom: 1px dashed #c20046;
+    margin-bottom: 10px;
+}
+.dropdown-table ul li {
+    line-height: 1.7;
+}
+.title-table{
+   font-weight: bold;
+}
+/* =================================== Drobdown End =================================== */
+ 
+/* ============================= Banner Start ================================= */
+.banner img {
+    width: 100%;
+    box-shadow: 0 0 13px #a3a3a3;
+}
+/* ============================= Banner End ================================= */
+ 
+/* ======================= Section2 Start ================================ */
+.section2{
+    margin-top: 70px;
+}
+.section2-items{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:15px;
+}
+.section2-items img{
+    width: 100%;
+    margin-bottom: 25px;
+}
+.section2-title2{
+   color: gray;
+}
+.item-title {
+    font-size: 20px;
+    color: #3b3b3b;
+}
+.section2-item {
+    position: relative;
+}
+.section2-item .icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color:#c20046;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
+.section2-item:hover .icon{
+    visibility: visible;
+    opacity: 1;
+}
+.underline{
+    background-color: #c20046;
+}
+/* ============================= Section2 End ===================================== */
+ 
+/* ======================================== Discounts Start======================================== */
+.discounts {
+    margin:30px 0;
+    display: flex;
+    margin-top: 70px;
+}
+.discounts-contain{
+    flex:2;
+    background: #f8eff2;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 0 7px 2px #8d8d8d;
+}
+.discounts-image {
+    flex: 1;
+    height: 300px;
+    position: relative;
+}
+.discounts-image-info{
+    position: absolute;
+    top:20px;
+    left: 15px;
+}
+.discounts-image-info h3{
+    font-weight: normal;
+    color: #f7f3ef;
+}
+.discounts-image-info h2{
+    font-size: 20px;
+    color:#c20046;
+}
+.discounts-image:nth-child(2){
+    background-image: url(../images/cake5.jpg);
+    border-radius: 10px;
+    background-size: cover;
+    margin:0 20px;
+    transition: 0.5s;
+}
+.discounts-image:nth-child(2):hover{
+    transform: scale(1.1);
+}
+.discounts-contain .discounts-descr{
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    color: #3b3b3b;
+}
+.discounts-contain .discounts-descr .icon{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size:40px;
+    color: #c20046;
+}
+.discounts-contain .discounts-descr +p{
+    line-height: 1.6;
+    color: #252525;
+}
+.discounts-contain .underscore span{
+     display: inline-block;
+     width:40px;
+     height: 2px;
+     background: #c20046;
+     margin-left: 25px;
+     
+}
+.discounts-contain .underscore{
+    position: absolute;
+    bottom: 20px;
+    right: 190px;
+}
+.discounts-image:nth-child(3){
+    background-image: url(../images/cake2.jpg);
+    border-radius: 10px;
+    background-size: cover; 
+    transition: 0.5s;
+}
+.discounts-image:nth-child(3):hover{
+    transform: scale(1.1);
+}
+/* ======================================== Discounts End======================================== */
+
+
+/* =============================== Available Start============================================ */
+.Available {
+    display:flex;
+    margin-bottom: 55px;
+    margin-top: 70px;
+}
+.Available-item:last-child{
+    border:0;
+}
+.Available-item{
+    flex:1;
+    border-right: 1px solid #c20046;
+    text-align: center;
+    margin-top: 25px;
+}
+.Available-text h3{
+    font-size: 18px;
+    color: #303030;
+}
+.Available-text span{
+    color: gray;
+    font-size: 15px;
+}
+.Available-icon{
+    background-image: url(../images/service-icon3.png);
+    height: 50px;
+    background-repeat: no-repeat;
+}
+.icon-1{
+background-position: center 5px;
+transition: 0.7s;
+}
+.Available-item:hover .icon-1{
+    background-position: center -88px;
+}
+.icon-2{
+background-position: center -180px;
+transition:0.7s;
+}
+.Available-item:hover .icon-2{
+    background-position: center -272px;
+}
+.icon-3{
+background-position: center -365px;
+transition: 0.7s;
+}
+.Available-item:hover .icon-3{
+    background-position: center -450px;
+}
+.icon-4{
+background-position: center -547px;
+transition: 0.7s;
+ }
+ .Available-item:hover .icon-4{
+    background-position: center -639px;
+}
+.icon-5{
+background-position: center -736px;
+transition: 0.7s;
+}
+.Available-item:hover .icon-5{
+    background-position: center -827px;
+}
+/* =============================== Available Start============================================ */
+
+
+/* =============================== Features Start======================================== */
+.Features{
+    margin-top: 50px ;
+}
+.Features-list{
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+.Features-list li{
+    margin: 10px 20px;
+    color: #464646;
+    font-weight: bold;
+}
+.Features-items{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ grid-gap:25px;
+ margin: 40px 0px;
+}
+.Features-gallery{
+ position: relative;
+ 
+}
+.Features-image{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    transform:scalex(0);
+    opacity: 0.8;
+    transition:1s;
+}
+.Features-image ul{
+    position: absolute;
+    /*hero image*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.Features-image ul li{
+    width: 42px;
+    height: 42px;
+    background-color:#c20046;
+    display: inline-block;
+    text-align: center;
+}
+.Features-image ul li i{
+    color: #fff;
+    line-height: 42px;
+    font-size: 25px;
+}
+.Features-item:hover .Features-image{
+    transform: scalex(1);
+}
+.Features-item i.yellow{
+    color: #eeea0c;
+}
+.Features-text span{
+    display: block;
+    margin: 6px 0;
+    color: #3b3b3b;
+    font-weight: bold;
+}
+.Features-text i{
+    margin-top: 10px;
+}
+.Features-text h3{
+    color: #c20046;
+}
+/* =============================== Features Start======================================== */
+
+/* =============================== footer Start======================================== */
+ footer{
+background-color: #d1c8c1;
+width: 100%;
+ }
+ .copy{
+    color: #c20046;
+    text-align: center;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+ }
+ footer ul{
+    text-align: center;
+ } 
+  .social-media{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    list-style: none;
+    display: inline-block;
+    color: #c20046;
+    background-color: #fdf2f2;
+    font-size: 18px;
+    text-align: center;
+    line-height: 35px;
+    margin-top: 15px
+ } 
+ .social-media:hover{
+    color: #fff;
+    background-color: #c20046;
+    transition: 0.5s;
+ }
+/* =============================== footer End======================================== */
+
+
